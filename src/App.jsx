@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API_BASE = "YOUR_BACKEND_URL"; // https://resumatch-backend-1.onrender.com
+const API_BASE = "https://resumatch-backend-1.onrender.com";
 
 export default function App() {
   const [resume, setResume] = useState("");
