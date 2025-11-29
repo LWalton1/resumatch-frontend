@@ -71,6 +71,20 @@ export default function App() {
                 <>
                   <h2>Cover Letter</h2>
                   <pre style={{whiteSpace:"pre-wrap"}}>{result.cover_letter}</pre>
+
+                  {result.sections && result.sections.length > 0 && (
+                    <>
+                      <h2>Tailored Sections</h2>
+                      {result.sections.map((sec, i) => (
+                        <div key={i} style={{marginBottom: 16}}>
+                          <h3>{sec.heading}</h3>
+                          <ul>
+                            {sec.bullets.map((b, j) => <li key={j}>{b}</li>)}
+                          </ul>
+                        </div>
+                      ))}
+                     </>
+                    )}
                 </>
               )}
             </>
